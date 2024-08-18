@@ -44,7 +44,7 @@ jobs:
           echo "REPOSITORY_NAME is: ${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}"
           npm run build
         env:
-          REPOSITORY_NAME: ${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}
+          REPOSITORY_NAME: auto-deploy-to-github-pages-template
         working-directory: ./frontend
       - name: Setup Pages
         uses: actions/configure-pages@v4
