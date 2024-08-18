@@ -38,7 +38,9 @@ jobs:
         run: npm install
         working-directory: ./frontend
       - name: Build
-        run: npm run build
+        run: |
+          echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}" >> $GITHUB_ENV
+          npm run build
         working-directory: ./frontend
       - name: Setup Pages
         uses: actions/configure-pages@v4
