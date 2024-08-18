@@ -40,9 +40,9 @@ jobs:
       - name: Build
         id: build
         run: |
-          echo "REPOSITORY_NAME=auto-deploy-to-github-pages-template" >> .env
+          echo "VITE_REPOSITORY_NAME=auto-deploy-to-github-pages-template" >> .env
           cat .env
-          echo "REPOSITORY_NAME is: ${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}"
+          echo "VITE_REPOSITORY_NAME is: ${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}"
           npm run build
         working-directory: ./frontend
       - name: Setup Pages
