@@ -40,11 +40,11 @@ jobs:
       - name: Build
         id: build
         run: |
-          echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}" >> $GITHUB_OUTPUT
-          echo "REPOSITORY_NAME is: ${{ steps.build.outputs.REPOSITORY_NAME }}"
+          echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}" >> $GITHUB_ENV
+          echo "REPOSITORY_NAME is: ${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}"
           npm run build
         env:
-          REPOSITORY_NAME: ${{ steps.deployment.outputs.REPOSITORY_NAME }}
+          REPOSITORY_NAME: ${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}
         working-directory: ./frontend
       - name: Setup Pages
         uses: actions/configure-pages@v4
