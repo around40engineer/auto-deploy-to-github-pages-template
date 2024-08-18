@@ -40,7 +40,7 @@ jobs:
       - name: Build
         run: |
           echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}" >> $GITHUB_ENV
-          echo "REPOSITORY_NAME is: $REPOSITORY_NAME"
+          echo "REPOSITORY_NAME is: ${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}"
           npm run build
         working-directory: ./frontend
       - name: Setup Pages
