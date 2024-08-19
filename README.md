@@ -16,18 +16,22 @@
 <!--   <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white"> -->
   
   <!-- バックエンドの言語一覧 -->
-  <img src="https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white" alt="kotlin">
+
+[//]: # (  <img src="https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white" alt="kotlin">)
   <!-- バックエンドのフレームワーク一覧 -->
   <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="spring">
   
   <!-- ミドルウェア一覧 -->
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="postgresql">
+
+[//]: # (  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="postgresql">)
 <!--   <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"> -->
 <!--   <img src="https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=Amazon%20DynamoDB&logoColor=white"> -->
-  <img src="https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white" alt="gradle">
+
+[//]: # (  <img src="https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white" alt="gradle">)
   
   <!-- インフラ一覧 -->
-  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="docker">
+
+[//]: # (  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="docker">)
 <!--   <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white"> -->
 <!--   <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"> -->
 <!--   <img src="https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34"> -->
@@ -56,18 +60,16 @@
 <br /> -->
 <!-- プロジェクト名を記載 -->
 
-## vite-and-springboot-web-app-template
+## auto-deploy-to-github-pages-template
 
-Webアプリ用のテンプレートリポジトリ
+フロントの静的サイトを GitHub Pages に自動デプロイするためのテンプレートです。
 
 <!-- プロジェクトについて -->
 
 ## プロジェクトについて
 
-デモとして簡単なTodoアプリを提供します。</br>
-フロントエンドのフレームワークとしてVite(React+Typescript)を使用し、バックエンドのフレームワークとしてSpringBoot(Kotlin)を使用しています。</br>
-Postgresqlをデータベースとして使用しています。ローカル開発環境としてDockerを使用してデータベースを立ち上げています。</br>
-このテンプレートを使うことで一般的なWebアプリの開発に必要な環境をすぐに構築することができます。</br>
+フロントエンドのフレームワークとしてVite(React+Typescript)を使用しています。</br>
+このテンプレートを使うことで一般的なWebアプリのフロントエンドを静的サイトとしてGitHub Pagesにデプロイすることができます。</br>
 
 
 <!-- プロジェクトの概要を記載　-->
@@ -89,11 +91,8 @@ Postgresqlをデータベースとして使用しています。ローカル開�
 | Node.js     | 22.4.1 |
 | Typescript  | 5.2.2  |
 | Vite        | 5.3.4  |
-| Java        | 21.0.4 |
-| Spring Boot | 3.3.2  |
-| Postgresql  | 15.3   |
 
-その他のパッケージのバージョンは build.gradle.kts と package.json を参照してください
+その他のパッケージのバージョンはpackage.json を参照してください
 
 <p>(<a href="#top">トップへ</a>)</p>
 
@@ -102,60 +101,28 @@ Postgresqlをデータベースとして使用しています。ローカル開�
 <!-- Treeコマンドを使ってディレクトリ構成を記載 -->
 <pre>
 .
-├── backend
-│   ├── .gradle
-│   ├── build
-│   ├── gradle
-│   ├── src
-│   │   ├── main
-│   │   │   └── kotlin
-│   │   │       └── com
-│   │   │           └── example
-│   │   │               └── backend
-│   │   │                   ├── BootApplication.kt
-│   │   │                   ├── MemoController.kt
-│   │   │                   ├── MemoRepository.kt
-│   │   │                   ├── MemoService.kt
-│   │   │                   ├── MemoEntity.kt
-│   │   │                   ├── ReqSaveMemo.kt
-│   │   │                   └── ResGetMemo.kt
-│   │   └── test
-│   │       └── kotlin
-│   │           └── com
-│   │               └── example
-│   │                   └── backend
-│   │                       ├── controller
-│   │                       ├── dto
-│   │                       ├── entity
-│   │                       ├── repository
-│   │                       └── service
-│   ├── .gitignore
-│   ├── build.gradle.kts
-│   ├── gradlew
-│   ├── gradlew.bat
-│   ├── HELP.md
-│   └── settings.gradle.kts
-│
 ├── frontend
-│   ├── .gitignore
-│   ├── README.md
-│   ├── __test__
-│   ├── components
-│   ├── features
-│   ├── next-env.d.ts
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── pages
-│   ├── postcss.config.js
 │   ├── public
-│   ├── styles
-│   ├── tailwind.config.js
-│   └── tsconfig.json
-├── .env
+│   ├── src
+│   │   ├── assets
+│   │   ├── repositories
+│   │   ├── tests
+│   │   ├── App.css
+│   │   ├── App.tsx
+│   │   ├── index.css
+│   │   ├── main.tsx
+│   │   ├── setup.ts
+│   │   └── vite-env.d.ts
+│   ├── .eslintrc.cjs
+│   ├── .gitignore
+│   ├── index.html
+│   ├── README.md
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.json
 ├── .gitignore
-├── Makefile
-├── README.md
-└── docker-compose.yml
+└── README.md
 </pre>
 
 <p>(<a href="#top">トップへ</a>)</p>
@@ -221,44 +188,58 @@ make preview
 
 ### 動作確認
 
-http://localhost:8080 にアクセスできるか確認
+http://localhost:5173 にアクセスできるか確認
 アクセスできたら成功
 
-### コンテナの停止
+[//]: # (### コンテナの停止)
 
-以下のコマンドでコンテナを停止することができます
+[//]: # ()
+[//]: # (以下のコマンドでコンテナを停止することができます)
 
-```
-make down
-```
+[//]: # ()
+[//]: # (```)
 
-### 環境変数の一覧
+[//]: # (make down)
 
-| 変数名                    | 役割                          | デフォルト値                             | DEV 環境での値            |
-|------------------------|-----------------------------|------------------------------------|----------------------|
-| MYSQL_ROOT_PASSWORD    | MySQL のルートパスワード（Docker で使用） | root                               |                      |
-| MYSQL_DATABASE         | MySQL のデータベース名（Docker で使用）  | django-db                          |                      |
-| MYSQL_USER             | MySQL のユーザ名（Docker で使用）     | django                             |                      |
-| MYSQL_PASSWORD         | MySQL のパスワード（Docker で使用）    | django                             |                      |
-| MYSQL_HOST             | MySQL のホスト名（Docker で使用）     | db                                 |                      |
-| MYSQL_PORT             | MySQL のポート番号（Docker で使用）    | 3306                               |                      |
-| SECRET_KEY             | Django のシークレットキー            | secretkey                          | 他者に推測されないランダムな値にすること |
-| ALLOWED_HOSTS          | リクエストを許可するホスト名              | localhost 127.0.0.1 [::1] back web | フロントのホスト名            |
-| DEBUG                  | デバッグモードの切り替え                | True                               | False                |
-| TRUSTED_ORIGINS        | CORS で許可するオリジン              | http://localhost                   |                      |
-| DJANGO_SETTINGS_MODULE | Django アプリケーションの設定モジュール     | project.settings.local             | project.settings.dev |
+[//]: # (```)
+
+[//]: # ()
+[//]: # (### 環境変数の一覧)
+
+[//]: # ()
+[//]: # (| 変数名                    | 役割                          | デフォルト値                             | DEV 環境での値            |)
+
+[//]: # (|------------------------|-----------------------------|------------------------------------|----------------------|)
+
+[//]: # (| MYSQL_ROOT_PASSWORD    | MySQL のルートパスワード（Docker で使用） | root                               |                      |)
+
+[//]: # (| MYSQL_DATABASE         | MySQL のデータベース名（Docker で使用）  | django-db                          |                      |)
+
+[//]: # (| MYSQL_USER             | MySQL のユーザ名（Docker で使用）     | django                             |                      |)
+
+[//]: # (| MYSQL_PASSWORD         | MySQL のパスワード（Docker で使用）    | django                             |                      |)
+
+[//]: # (| MYSQL_HOST             | MySQL のホスト名（Docker で使用）     | db                                 |                      |)
+
+[//]: # (| MYSQL_PORT             | MySQL のポート番号（Docker で使用）    | 3306                               |                      |)
+
+[//]: # (| SECRET_KEY             | Django のシークレットキー            | secretkey                          | 他者に推測されないランダムな値にすること |)
+
+[//]: # (| ALLOWED_HOSTS          | リクエストを許可するホスト名              | localhost 127.0.0.1 [::1] back web | フロントのホスト名            |)
+
+[//]: # (| DEBUG                  | デバッグモードの切り替え                | True                               | False                |)
+
+[//]: # (| TRUSTED_ORIGINS        | CORS で許可するオリジン              | http://localhost                   |                      |)
+
+[//]: # (| DJANGO_SETTINGS_MODULE | Django アプリケーションの設定モジュール     | project.settings.local             | project.settings.dev |)
 
 ### コマンド一覧
 
-| Make           | 実行する処理                            | 元のコマンド                                              |
-|----------------|-----------------------------------|-----------------------------------------------------|
-| make prepare   | node_modules のインストール、コンテナの起動      | cd frontend && npm install</br>docker-compose up -d |
-| make f-test    | フロントエンドのテストを実行                    | cd frontend && npm run test                         |
-| make b-test    | バックエンドのテストを実行                     | cd backend &&  ./gradle test                        |
-| make test      | フロントエンドとバックエンドのテストを実行             | make f-test && make b-test                          |
-| make f-preview | フロントエンドを起動（localhost:5173）        | cd frontend && npm run test                         |
-| make preview   | フロントエンドとバックエンドを起動(localhost:8080) | cd frontend && npm run build</br>cd frontend &&     |
-| make down      | 立ち上げたコンテナを停止する                    | docker-compose down                                 |
+| Make           | 実行する処理                       | 元のコマンド                      |
+|----------------|------------------------------|-----------------------------|
+| make prepare   | node_modules のインストール、コンテナの起動 | cd frontend && npm install　 |
+| make test      | テストを実行                       | cd frontend && npm run test |
+| make preview   | アプリを起動(localhost:5173)       | cd frontend && npm run dev  |
 
 
 <!-- ### リモートデバッグの方法
